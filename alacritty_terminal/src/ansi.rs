@@ -18,6 +18,7 @@ use std::str;
 
 use log::{debug, trace};
 use serde::{Deserialize, Serialize};
+use vte::kitty::Kitty;
 
 use crate::index::{Column, Line};
 use crate::term::color::Rgb;
@@ -1142,6 +1143,16 @@ where
             (b'\\', None) => (),
             _ => unhandled!(),
         }
+    }
+
+    #[inline]
+    fn kitty(&mut self, this: Kitty) {
+
+    }
+
+    #[inline]
+    fn debug(&mut self, _: &'static str) {
+      //  Never do anything here.
     }
 }
 
